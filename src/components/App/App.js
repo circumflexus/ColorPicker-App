@@ -30,14 +30,14 @@ const App = () => {
     };
   
     return (
-      <div className="color-picker-app">
-        <ColorPicker
+        <div className="color-picker-app">
+          <ColorPicker
             value={value}
             onChange={onChange}
             onSubmit={onSubmit}
             onCancel={onCancel}/>
-      </div>
-      );
+        </div>
+    );
 };
 
 export default App;

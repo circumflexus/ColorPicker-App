@@ -6,6 +6,10 @@ import "./Buttons.css";
 const Buttons = ({value, onChange, onSubmit, onCancel}) => {
     const [toggle, setToggle] = useState(true);
 
+    const onSlidersBlockToggle = () => {
+        setToggle(!toggle);
+    };
+
     const onCancelClick = () => {
         setToggle(false);
         onCancel();
@@ -21,7 +25,7 @@ const Buttons = ({value, onChange, onSubmit, onCancel}) => {
                 <div className="buttons-block">
                     <button 
                         className="button button-hide"
-                        onClick={() => setToggle(false)}>
+                        onClick={onSlidersBlockToggle}>
                             Hide
                     </button>
                     <button
@@ -46,7 +50,7 @@ const Buttons = ({value, onChange, onSubmit, onCancel}) => {
                 <div className="buttons-block">
                     <button 
                         className="button"
-                        onClick={() => setToggle(true)}>
+                        onClick={onSlidersBlockToggle}>
                             Show
                     </button>
                     <button
